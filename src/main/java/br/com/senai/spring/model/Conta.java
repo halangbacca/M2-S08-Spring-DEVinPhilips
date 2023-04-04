@@ -8,5 +8,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Conta {
-    private Double saldo;
+    private Double saldo = (double) 0;
 }
