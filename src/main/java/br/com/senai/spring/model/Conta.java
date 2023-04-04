@@ -9,4 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Conta {
     private Double saldo = (double) 0;
+    private Cliente cliente;
 }
