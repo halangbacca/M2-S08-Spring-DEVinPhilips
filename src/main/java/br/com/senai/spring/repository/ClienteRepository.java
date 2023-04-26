@@ -27,6 +27,7 @@ public class ClienteRepository {
     }
 
     public void updateClientById(Integer id, Cliente cliente) {
-        clientList.add(id, cliente);
+        clientList.get(id).setNome(cliente.getNome());
+        clientList.get(id).setCpf(cliente.getCpf());
     }
 }

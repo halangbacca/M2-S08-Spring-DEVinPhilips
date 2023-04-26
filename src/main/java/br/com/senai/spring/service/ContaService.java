@@ -35,4 +35,8 @@ public class ContaService {
         repository.updateContaById(id, conta);
     }
 
+    public void transfere(Integer remetenteId, Integer destinatarioId) {
+        repository.transfere(remetenteId, destinatarioId);
+    }
+
 }

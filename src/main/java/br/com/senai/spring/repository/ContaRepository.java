@@ -27,7 +27,15 @@ public class ContaRepository {
     }
 
     public void updateContaById(Integer id, Conta conta) {
-        contaList.add(id, conta);
+        contaList.get(id).setSaldo(conta.getSaldo());
+        contaList.get(id).setClienteId(conta.getClienteId());
+    }
+
+    public List<Conta> transfere(Integer remetenteId, Integer destinatarioId){
+        contaList.get(destinatarioId).recebe(contaList.get(remetenteId).getSaldo());
+        contaList.get(remetenteId).setSaldo(0.0);
+
+        return contaList;
     }
 
 }

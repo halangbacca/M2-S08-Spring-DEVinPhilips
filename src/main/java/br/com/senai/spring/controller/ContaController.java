@@ -46,4 +46,10 @@ public class ContaController {
         service.updateContaById(id, conta);
     }
 
+    @PutMapping("/transfere")
+    public void transfere(
+            @RequestParam Integer remetenteId, @RequestParam Integer destinatarioId) {
+        service.transfere(remetenteId, destinatarioId);
+    }
+
 }
